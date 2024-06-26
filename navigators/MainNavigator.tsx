@@ -24,16 +24,16 @@ const Stack = createStackNavigator()
 function MyStack() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Stack" component={MyTabs} />
+            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown:false }}/>
+            <Stack.Screen name="Bottom" component={MyTabs} options={{ headerShown:true }}/>
         </Stack.Navigator>
     )
 }
 
-export default function BottomNavegador() {
+export default function Navegador() {
     return (
         <NavigationContainer>
-            <MyStack />
+            <MyStack/>
         </NavigationContainer>
     )
 }
